@@ -1,0 +1,62 @@
+.padre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+}
+
+.header,
+.articulo,
+.izquierda,
+.derecha,
+.footer {
+    flex-grow: 1;
+    /* Elementos ocupan el 100% del ancho */
+    flex-basis: 100%;
+    padding: 10px;
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 1 auto;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .articulo {
+        flex: 2 0;
+    }
+    .izquierda {
+        order: 1;
+    }
+    .articulo {
+        order: 2;
+    }
+    .derecha {
+        order: 3;
+    }
+    .footer {
+        order: 4;
+    }
+}
+
+.header {
+    background-color: midnightblue;
+}
+
+.articulo {
+    background-color: lightgrey;
+}
+
+.izquierda {
+    background-color: lightskyblue;
+}
+
+.derecha {
+    background-color: aquamarine;
+}
+
+.footer {
+    background-color: dimgray;
+}

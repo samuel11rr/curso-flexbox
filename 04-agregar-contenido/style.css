@@ -1,0 +1,259 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* prevenimos overflow */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* CLASES PARA EL CONTENEDOR PADRE */
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.margen-interno {
+    padding: 0 50px;
+}
+
+
+/* CLASES PARA EL HEADER */
+
+.header {
+    background-color: #000;
+    background: url('img/city.jpg');
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+    flex: 1 1 auto;
+    font-size: 30px;
+}
+
+.logo a {
+    color: #fff;
+}
+
+.logo a:hover {
+    color: #aaa;
+}
+
+.nav {
+    flex: 5 1 auto;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+.nav a:hover {
+    color: #aaa;
+}
+
+.social {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.social a {
+    font-size: 18px;
+    color: #fff;
+    padding: 0 5px;
+}
+
+.social a:hover {
+    color: #aaa;
+}
+
+.texto-principal {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 21px;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+/* CLASES PARA EL CONTENIDO */
+
+.section {
+    background-color: #f7f7f7;
+    display: flex;
+}
+
+.articulos {
+    background-color: #f7f7f7;
+    flex: 2 1 auto;
+    display: flex;
+    /* wrap va a bajar los elementos si es que no caben en horizontal */
+    flex-flow: row wrap;
+}
+
+.article {
+    flex: 1 1 45%;
+    color: #444;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 10px 10px 0 0;
+    background-color: #ececec;
+}
+
+.article img {
+    width: 100%;
+}
+
+.article a {
+    color: #fff;
+    font-size: 13px;
+    padding: 10px;
+    background: #000;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.article a:hover {
+    background-color: #67f;
+}
+
+h3 {
+    color: #fff;
+    font-size: 13px;
+    padding: 10px 0;
+    margin-top: -80px;
+}
+
+h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 0 0 10px 0;
+    color: #fff;
+}
+
+.navegacion {
+    background-color: #000;
+    flex: 1 1 100%;
+    margin: 10px 10px 0 0;
+}
+
+.navegacion a {
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+.aside {
+    flex: 1 1 auto !important;
+    margin: 10px 5px 10px 0;
+}
+
+.aside img {
+    width: 100%;
+}
+
+h4 {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.publicidad {}
+
+
+/* CLASES PARA EL FOOTER */
+
+.footer {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pie {
+    /* background-color: #e6af2e; */
+    text-align: center;
+}
+
+.pie a {
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+@media all and (max-width: 1120px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+    .section {
+        flex-direction: column;
+    }
+    .aside {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 15px;
+    }
+    .texto-principal {
+        height: 450px;
+    }
+}
+
+@media all and (max-width: 762px) {
+    .articulos {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 650px) {
+    .off {
+        display: none;
+    }
+    .nav a {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .aside {
+        flex-direction: column;
+    }
+}

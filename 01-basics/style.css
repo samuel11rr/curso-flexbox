@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 80%;
+    /* height: 500px; */
+    background: #FF5C29;
+    margin: 50px auto;
+    /* habilita flexbox */
+    display: flex;
+    /* modo en que visualizaremos los hijos */
+    flex-direction: row;
+    /* para repetar las propiedades de los hijos */
+    flex-wrap: wrap;
+    /* alineacion de los hijos */
+    justify-content: space-around;
+    /* alineacion vertical de los hijos */
+    align-items: center;
+    /* alineacion vertical cuando hay mas de 1 linea (fila) de elementos */
+    align-content: space-around;
+}
+
+.hijo {
+    background: #00B285;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    /* Rellena los espacios donde se necesita */
+    /* flex-grow: 1; */
+    /* Restringe el ancho minimo con 0, con 1 se ajusta el tamaño dinamicamente */
+    /* flex-shrink: 0; */
+    /* combina grow y shrink en una sola linea */
+    flex: 1 1 auto;
+    /* Ordena la prioridad de los elementos */
+    order: 2;
+}
+
+.otro {
+    order: 1;
+    /* alineacion vertical para elementos hijos. | strech para ocupar todo el alto del contenedor padre*/
+    align-self: flex-end;
+}
